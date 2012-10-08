@@ -2,8 +2,7 @@
       document.addEventListener("deviceready", onDeviceReady, true);
  }
  function onDeviceReady(){
-      navigator.notification.
-      alert("PhoneGap is working!!");
+     
  }
  function getTweets() {
 	    var q = "ufo+spotted"
@@ -13,8 +12,3 @@
 	        $("#tmpl-tweets").tmpl(data.results).appendTo("#tweets");
 	    });
 }
- var theScroll;
- function scroll(){
-     theScroll = new iScroll('wrapper');
- }
- document.addEventListener('DOMContentLoaded', scroll, false);
