@@ -1,1 +1,2 @@
 This is the twitter, maps and camera tutorial.  So far twitter is complete and moving onto camera. 
+I was able to complete the camera but ran out of time to complete the maps section of the tutorial.  
