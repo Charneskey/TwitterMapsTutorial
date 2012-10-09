@@ -1,9 +1,12 @@
- function onLoad(){
+var pictureSource, destinationType; 
+
+function onLoad(){
       document.addEventListener("deviceready", onDeviceReady, true);
       //document.addEventListener("deviceready",loaded,false);//for the camera????
  }
  function onDeviceReady(){
-     
+	 pictureSource=navigator.camera.PictureSourceType;
+	 destinationType=navigator.camera.DestinationType;
  }
  function getTweets(data){
 	//console.log(data);	
@@ -22,17 +25,15 @@
 		$('#tweetlist').html(output);
 	}
  //Camera functions
- var pictureSource, destinationType;
  
 
 function loaded() {
-	 pictureSource=navigator.camera.PictureSourceType;
-	 destinationType=navigator.camera.DestinationType;
+	
 }
 function getPhoto(imageData) {
 	 var smallImage = document.getElementById('smallImage');
 	 smallImage.style.display = 'block';
-	 smallImage.src = "data:image/jpeg;base64," + imageData;
+	 smallImage.src = imageData;
 }
 function capturePhoto() {
 	navigator.camera.getPicture(getPhoto, onFail, { quality: 50 });
